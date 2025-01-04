@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Takes up the remaining space between header and footer */
+}
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+.search-section {
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center align the section horizontally */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.card {
+    padding: 30px; /* Add internal spacing for the card */
+}

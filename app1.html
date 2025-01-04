@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Appointment Booking Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMTc3M3wwfDF8c2VhcmNofDh8fGhlYWx0aHxlbnwwfHx8fDE2ODI5MDczMzg&ixlib=rb-1.2.1&q=80&w=1920') 
+                no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 450px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .form-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .form-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .form-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+	<script>
+	function mess()
+	{
+	alert(" Welcome to our Hosiptal and your Appointment is Booked");
+	}
+	
+	</script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form">
+            <fieldset>
+                <legend>Patient Details</legend>
+                <div class="form-group">
+                    <label for="patient-name">Patient Name</label>
+                    <input type="text" id="patient-name" name="patient-name" placeholder="Enter Patient Name" required>
+                </div>
+				<div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">Appointment Date</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="doctor">Select Doctor</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="">--Choose a Doctor--</option>
+                        <option value="dr-smith">Dr.N.Madhu</option>
+                        <option value="dr-jones">Dr.P.RamaMohan</option>
+                        <option value="dr-lee">Dr.C PavanKumar</option>
+                    </select>
+                </div>
+             <div class="form-group">
+                <button type="submit" onClick="mess()">Register as new Patient</button>
+            </div>
+</body>
+</html>
